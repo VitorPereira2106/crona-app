@@ -76,7 +76,9 @@ class _LoginViewState extends State<LoginView> {
 
                     // BOTÃO ESQUECEU SENHA
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'recuperar_senha');
+                      },
                       child: const Text(
                         'Esqueceu a senha?',
                         style: TextStyle(color: Colors.deepPurple),
