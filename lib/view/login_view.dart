@@ -58,15 +58,22 @@ class _LoginViewState extends State<LoginView> {
                 padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: Column(
                   children: [
+                    //
+                    // CAMPOS DE INPUT
+                    //
+
                     // INPUT EMAIL
                     TextField(
                       decoration: const InputDecoration(labelText: 'E-Mail'),
                     ),
+
                     // INPUT SENHA
                     TextField(
                       decoration: const InputDecoration(labelText: 'Senha'),
                     ),
+
                     SizedBox(height: 24),
+
                     // BOTÃO ESQUECEU SENHA
                     TextButton(
                       onPressed: () {},
@@ -75,6 +82,7 @@ class _LoginViewState extends State<LoginView> {
                         style: TextStyle(color: Colors.deepPurple),
                       ),
                     ),
+
                     SizedBox(height: 12),
                   ],
                 ),
@@ -82,6 +90,10 @@ class _LoginViewState extends State<LoginView> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  //
+                  // BOTÕES
+                  //
+
                   // BOTÃO ENTRAR
                   ElevatedButton(
                     style: ButtonStyle(
@@ -95,7 +107,9 @@ class _LoginViewState extends State<LoginView> {
                       style: TextStyle(color: Colors.black),
                     ),
                   ),
+
                   SizedBox(width: 24),
+
                   // BOTÃO CADASTRAR
                   ElevatedButton(
                     style: ButtonStyle(
@@ -103,7 +117,9 @@ class _LoginViewState extends State<LoginView> {
                         Colors.amber,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'cadastro_usuario');
+                    },
                     child: const Text(
                       'Criar conta',
                       style: TextStyle(color: Colors.black),
