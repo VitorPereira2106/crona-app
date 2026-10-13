@@ -14,39 +14,25 @@ class _LoginViewState extends State<LoginView> {
       appBar: AppBar(
         centerTitle: false,
         title: Row(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
               Icons.punch_clock_rounded,
-              size: 28,
+              size: 32,
               color: Colors.black,
             ),
-            SizedBox(width: 8),
+            SizedBox(width: 4),
             Text(
               'Crona',
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
-                fontSize: 16,
+                fontSize: 32,
               ),
             ),
           ],
         ),
         backgroundColor: Colors.amber,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 16),
-            child: Center(
-              child: Text(
-                'Login',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-        ],
       ),
       backgroundColor: Colors.red.shade50,
       body: SafeArea(
@@ -110,7 +96,9 @@ class _LoginViewState extends State<LoginView> {
                               Colors.amber,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'perfil');
+                          },
                           child: const Text(
                             'Entrar',
                             style: TextStyle(color: Colors.black),
