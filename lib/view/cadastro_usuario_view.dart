@@ -87,7 +87,7 @@ class _CadastroUsuarioViewState extends State<CadastroUsuarioView> {
                 ),
                 onPressed: () {},
                 child: const Text(
-                  'Criar conta',
+                  'Finalizar cadastro',
                   style: TextStyle(color: Colors.black),
                 ),
               ),
