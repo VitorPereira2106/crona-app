@@ -54,80 +54,110 @@ class _LoginViewState extends State<LoginView> {
           padding: EdgeInsets.all(20),
           child: Column(
             children: [
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+              Expanded(
                 child: Column(
                   children: [
-                    //
-                    // CAMPOS DE INPUT
-                    //
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      child: Column(
+                        children: [
+                          //
+                          // CAMPOS DE INPUT
+                          //
 
-                    // INPUT EMAIL
-                    TextField(
-                      decoration: const InputDecoration(labelText: 'E-Mail'),
-                    ),
+                          // INPUT EMAIL
+                          TextField(
+                            decoration: const InputDecoration(
+                              labelText: 'E-Mail',
+                            ),
+                          ),
 
-                    // INPUT SENHA
-                    TextField(
-                      decoration: const InputDecoration(labelText: 'Senha'),
-                    ),
+                          // INPUT SENHA
+                          TextField(
+                            decoration: const InputDecoration(
+                              labelText: 'Senha',
+                            ),
+                          ),
 
-                    SizedBox(height: 24),
+                          SizedBox(height: 24),
 
-                    // BOTÃO ESQUECEU SENHA
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, 'recuperar_senha');
-                      },
-                      child: const Text(
-                        'Esqueceu a senha?',
-                        style: TextStyle(color: Colors.deepPurple),
+                          // BOTÃO ESQUECEU SENHA
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'recuperar_senha');
+                            },
+                            child: const Text(
+                              'Esqueceu a senha?',
+                              style: TextStyle(color: Colors.deepPurple),
+                            ),
+                          ),
+
+                          SizedBox(height: 12),
+                        ],
                       ),
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        //
+                        // BOTÕES
+                        //
 
-                    SizedBox(height: 12),
+                        // BOTÃO ENTRAR
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStatePropertyAll<Color>(
+                              Colors.amber,
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text(
+                            'Entrar',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+
+                        SizedBox(width: 24),
+
+                        // BOTÃO CADASTRAR
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStatePropertyAll<Color>(
+                              Colors.amber,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'cadastro_usuario');
+                          },
+                          child: const Text(
+                            'Criar conta',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  //
-                  // BOTÕES
-                  //
 
-                  // BOTÃO ENTRAR
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStatePropertyAll<Color>(
-                        Colors.amber,
-                      ),
+              // BOTÃO SOBRE (colado no rodapé)
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'sobre');
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.info_outline, color: Colors.deepPurple),
+                    SizedBox(
+                      width: 6,
                     ),
-                    onPressed: () {},
-                    child: const Text(
-                      'Entrar',
-                      style: TextStyle(color: Colors.black),
+                    const Text(
+                      'Sobre',
+                      style: TextStyle(color: Colors.grey),
                     ),
-                  ),
-
-                  SizedBox(width: 24),
-
-                  // BOTÃO CADASTRAR
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStatePropertyAll<Color>(
-                        Colors.amber,
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'cadastro_usuario');
-                    },
-                    child: const Text(
-                      'Criar conta',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
