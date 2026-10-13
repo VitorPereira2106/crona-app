@@ -19,22 +19,19 @@ class _LoginViewState extends State<LoginView> {
             Icon(
               Icons.punch_clock_rounded,
               size: 32,
-              color: Colors.black,
             ),
             SizedBox(width: 4),
             Text(
               'Crona',
               style: TextStyle(
-                color: Colors.black,
                 fontWeight: FontWeight.bold,
                 fontSize: 32,
               ),
             ),
           ],
         ),
-        backgroundColor: Colors.amber,
       ),
-      backgroundColor: Colors.red.shade50,
+
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(20),
@@ -74,7 +71,6 @@ class _LoginViewState extends State<LoginView> {
                             },
                             child: const Text(
                               'Esqueceu a senha?',
-                              style: TextStyle(color: Colors.deepPurple),
                             ),
                           ),
 
@@ -91,17 +87,12 @@ class _LoginViewState extends State<LoginView> {
 
                         // BOTÃO ENTRAR
                         ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStatePropertyAll<Color>(
-                              Colors.amber,
-                            ),
-                          ),
+                          style: ButtonStyle(),
                           onPressed: () {
                             Navigator.pushNamed(context, 'perfil');
                           },
                           child: const Text(
                             'Entrar',
-                            style: TextStyle(color: Colors.black),
                           ),
                         ),
 
@@ -109,17 +100,12 @@ class _LoginViewState extends State<LoginView> {
 
                         // BOTÃO CADASTRAR
                         ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStatePropertyAll<Color>(
-                              Colors.amber,
-                            ),
-                          ),
+                          style: ButtonStyle(),
                           onPressed: () {
                             Navigator.pushNamed(context, 'cadastro_usuario');
                           },
                           child: const Text(
                             'Criar conta',
-                            style: TextStyle(color: Colors.black),
                           ),
                         ),
                       ],
@@ -136,13 +122,12 @@ class _LoginViewState extends State<LoginView> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.info_outline, color: Colors.deepPurple),
+                    Icon(Icons.info_outline),
                     SizedBox(
                       width: 6,
                     ),
                     const Text(
                       'Sobre',
-                      style: TextStyle(color: Colors.grey),
                     ),
                   ],
                 ),

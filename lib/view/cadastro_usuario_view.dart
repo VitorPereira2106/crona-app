@@ -19,22 +19,19 @@ class _CadastroUsuarioViewState extends State<CadastroUsuarioView> {
             Icon(
               Icons.person_add,
               size: 28,
-              color: Colors.black,
             ),
             SizedBox(width: 8),
             Text(
               'Cadastro',
               style: TextStyle(
-                color: Colors.black,
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
             ),
           ],
         ),
-        backgroundColor: Colors.amber,
       ),
-      backgroundColor: Colors.red.shade50,
+
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(20),
@@ -80,15 +77,10 @@ class _CadastroUsuarioViewState extends State<CadastroUsuarioView> {
                 height: 48,
               ),
               ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll<Color>(
-                    Colors.amber,
-                  ),
-                ),
+                style: ButtonStyle(),
                 onPressed: () {},
                 child: const Text(
                   'Finalizar cadastro',
-                  style: TextStyle(color: Colors.black),
                 ),
               ),
             ],
