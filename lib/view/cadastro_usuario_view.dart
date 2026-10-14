@@ -40,31 +40,43 @@ class _CadastroUsuarioViewState extends State<CadastroUsuarioView> {
               //
               // CAMPOS DE INPUT
               //
-
               // INPUT USUÁRIO
               TextField(
-                decoration: const InputDecoration(labelText: 'Usuário'),
+                decoration: const InputDecoration(
+                  labelText: 'Usuário',
+                  prefixIcon: Icon(Icons.person_outline),
+                ),
               ),
 
               // INPUT EMAIL
               TextField(
-                decoration: const InputDecoration(labelText: 'E-Mail'),
+                decoration: const InputDecoration(
+                  labelText: 'E-Mail',
+                  prefixIcon: Icon(Icons.mail_outlined),
+                ),
               ),
 
               // INPUT TELEFONE
               TextField(
-                decoration: const InputDecoration(labelText: 'Telefone'),
+                decoration: const InputDecoration(
+                  labelText: 'Telefone',
+                  prefixIcon: Icon(Icons.phone_outlined),
+                ),
               ),
 
               // INPUT SENHA
               TextField(
-                decoration: const InputDecoration(labelText: 'Senha'),
+                decoration: const InputDecoration(
+                  labelText: 'Senha',
+                  prefixIcon: Icon(Icons.password_outlined),
+                ),
               ),
 
               // INPUT CONFIRMAR SENHA
               TextField(
                 decoration: const InputDecoration(
                   labelText: 'Confirme sua senha',
+                  prefixIcon: Icon(Icons.key_outlined),
                 ),
               ),
 

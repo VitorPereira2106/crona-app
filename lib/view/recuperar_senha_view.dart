@@ -47,7 +47,10 @@ class _RecuperarSenhaViewState extends State<RecuperarSenhaView> {
 
               // INPUT EMAIL
               TextField(
-                decoration: const InputDecoration(labelText: 'E-Mail'),
+                decoration: const InputDecoration(
+                  labelText: 'E-Mail',
+                  prefixIcon: Icon(Icons.mail_outline),
+                ),
               ),
 
               SizedBox(
