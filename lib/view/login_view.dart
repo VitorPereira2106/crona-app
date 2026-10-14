@@ -52,6 +52,7 @@ class _LoginViewState extends State<LoginView> {
                           TextField(
                             decoration: const InputDecoration(
                               labelText: 'E-Mail',
+                              prefixIcon: Icon(Icons.mail),
                             ),
                           ),
 
@@ -59,6 +60,7 @@ class _LoginViewState extends State<LoginView> {
                           TextField(
                             decoration: const InputDecoration(
                               labelText: 'Senha',
+                              prefixIcon: Icon(Icons.password),
                             ),
                           ),
 
@@ -78,7 +80,7 @@ class _LoginViewState extends State<LoginView> {
                         ],
                       ),
                     ),
-                    Row(
+                    Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         //
@@ -86,26 +88,42 @@ class _LoginViewState extends State<LoginView> {
                         //
 
                         // BOTÃO ENTRAR
-                        ElevatedButton(
-                          style: ButtonStyle(),
-                          onPressed: () {
-                            Navigator.pushNamed(context, 'perfil');
-                          },
-                          child: const Text(
-                            'Entrar',
+                        SizedBox(
+                          width: double.infinity,
+                          height: 48,
+                          child: ElevatedButton(
+                            style: ButtonStyle(),
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'perfil');
+                            },
+                            child: const Text(
+                              'Entrar',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
+                            ),
                           ),
                         ),
 
-                        SizedBox(width: 24),
+                        SizedBox(height: 24),
 
                         // BOTÃO CADASTRAR
-                        ElevatedButton(
-                          style: ButtonStyle(),
-                          onPressed: () {
-                            Navigator.pushNamed(context, 'cadastro_usuario');
-                          },
-                          child: const Text(
-                            'Criar conta',
+                        SizedBox(
+                          width: double.infinity,
+                          height: 48,
+                          child: OutlinedButton(
+                            style: ButtonStyle(),
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'cadastro_usuario');
+                            },
+                            child: const Text(
+                              'Criar conta',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
+                            ),
                           ),
                         ),
                       ],

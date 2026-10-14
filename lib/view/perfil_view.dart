@@ -36,40 +36,61 @@ class _PerfilViewState extends State<PerfilView> {
           padding: EdgeInsets.all(20),
           child: Column(
             children: [
-              Row(
-                children: [
-                  Icon(Icons.info_outline),
-                  SizedBox(
-                    width: 6,
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    mainAxisSize: .min,
+                    children: [
+                      Row(
+                        children: <Widget>[
+                          Icon(Icons.info_outline),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Text('Dados do usuário'),
+                        ],
+                      ),
+
+                      SizedBox(
+                        height: 12,
+                      ),
+
+                      // INPUT USUÁRIO
+                      TextField(
+                        decoration: const InputDecoration(
+                          labelText: 'Usuário',
+                          prefixIcon: Icon(Icons.person_outline),
+                        ),
+                      ),
+
+                      // INPUT EMAIL
+                      TextField(
+                        decoration: const InputDecoration(
+                          labelText: 'E-Mail',
+                          prefixIcon: Icon(Icons.mail_outlined),
+                        ),
+                      ),
+
+                      // INPUT TELEFONE
+                      TextField(
+                        decoration: const InputDecoration(
+                          labelText: 'Telefone',
+                          prefixIcon: Icon(Icons.phone_outlined),
+                        ),
+                      ),
+
+                      // INPUT SENHA
+                      TextField(
+                        decoration: const InputDecoration(
+                          labelText: 'Senha',
+                          prefixIcon: Icon(Icons.password_outlined),
+                        ),
+                      ),
+                    ],
                   ),
-                  Text('Dados do usuário'),
-                ],
+                ),
               ),
-
-              SizedBox(
-                height: 12,
-              ),
-
-              // INPUT USUÁRIO
-              TextField(
-                decoration: const InputDecoration(labelText: 'Usuário'),
-              ),
-
-              // INPUT EMAIL
-              TextField(
-                decoration: const InputDecoration(labelText: 'E-Mail'),
-              ),
-
-              // INPUT TELEFONE
-              TextField(
-                decoration: const InputDecoration(labelText: 'Telefone'),
-              ),
-
-              // INPUT SENHA
-              TextField(
-                decoration: const InputDecoration(labelText: 'Senha'),
-              ),
-
               SizedBox(
                 height: 24,
               ),
