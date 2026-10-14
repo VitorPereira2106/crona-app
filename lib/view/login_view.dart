@@ -14,120 +14,123 @@ class _LoginViewState extends State<LoginView> {
       appBar: AppBar(
         centerTitle: false,
         title: Row(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
               Icons.punch_clock_rounded,
-              size: 28,
-              color: Colors.black,
+              size: 32,
             ),
-            SizedBox(width: 8),
+            SizedBox(width: 4),
             Text(
               'Crona',
               style: TextStyle(
-                color: Colors.black,
                 fontWeight: FontWeight.bold,
-                fontSize: 16,
+                fontSize: 32,
               ),
             ),
           ],
         ),
-        backgroundColor: Colors.amber,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 16),
-            child: Center(
-              child: Text(
-                'Login',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-        ],
       ),
-      backgroundColor: Colors.red.shade50,
+
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(20),
           child: Column(
             children: [
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+              Expanded(
                 child: Column(
                   children: [
-                    //
-                    // CAMPOS DE INPUT
-                    //
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      child: Column(
+                        children: [
+                          //
+                          // CAMPOS DE INPUT
+                          //
 
-                    // INPUT EMAIL
-                    TextField(
-                      decoration: const InputDecoration(labelText: 'E-Mail'),
-                    ),
+                          // INPUT EMAIL
+                          TextField(
+                            decoration: const InputDecoration(
+                              labelText: 'E-Mail',
+                            ),
+                          ),
 
-                    // INPUT SENHA
-                    TextField(
-                      decoration: const InputDecoration(labelText: 'Senha'),
-                    ),
+                          // INPUT SENHA
+                          TextField(
+                            decoration: const InputDecoration(
+                              labelText: 'Senha',
+                            ),
+                          ),
 
-                    SizedBox(height: 24),
+                          SizedBox(height: 24),
 
-                    // BOTÃO ESQUECEU SENHA
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, 'recuperar_senha');
-                      },
-                      child: const Text(
-                        'Esqueceu a senha?',
-                        style: TextStyle(color: Colors.deepPurple),
+                          // BOTÃO ESQUECEU SENHA
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'recuperar_senha');
+                            },
+                            child: const Text(
+                              'Esqueceu a senha?',
+                            ),
+                          ),
+
+                          SizedBox(height: 12),
+                        ],
                       ),
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        //
+                        // BOTÕES
+                        //
 
-                    SizedBox(height: 12),
+                        // BOTÃO ENTRAR
+                        ElevatedButton(
+                          style: ButtonStyle(),
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'perfil');
+                          },
+                          child: const Text(
+                            'Entrar',
+                          ),
+                        ),
+
+                        SizedBox(width: 24),
+
+                        // BOTÃO CADASTRAR
+                        ElevatedButton(
+                          style: ButtonStyle(),
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'cadastro_usuario');
+                          },
+                          child: const Text(
+                            'Criar conta',
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  //
-                  // BOTÕES
-                  //
 
-                  // BOTÃO ENTRAR
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStatePropertyAll<Color>(
-                        Colors.amber,
-                      ),
+              // BOTÃO SOBRE (colado no rodapé)
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'sobre');
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.info_outline),
+                    SizedBox(
+                      width: 6,
                     ),
-                    onPressed: () {},
-                    child: const Text(
-                      'Entrar',
-                      style: TextStyle(color: Colors.black),
+                    const Text(
+                      'Sobre',
                     ),
-                  ),
-
-                  SizedBox(width: 24),
-
-                  // BOTÃO CADASTRAR
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: WidgetStatePropertyAll<Color>(
-                        Colors.amber,
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, 'cadastro_usuario');
-                    },
-                    child: const Text(
-                      'Criar conta',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),

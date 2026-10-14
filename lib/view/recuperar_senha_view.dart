@@ -19,22 +19,19 @@ class _RecuperarSenhaViewState extends State<RecuperarSenhaView> {
             Icon(
               Icons.key,
               size: 28,
-              color: Colors.black,
             ),
             SizedBox(width: 8),
             Text(
               'Recuperar senha',
               style: TextStyle(
-                color: Colors.black,
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
             ),
           ],
         ),
-        backgroundColor: Colors.amber,
       ),
-      backgroundColor: Colors.red.shade50,
+
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(20),
@@ -59,15 +56,10 @@ class _RecuperarSenhaViewState extends State<RecuperarSenhaView> {
 
               // BOTÃO RECUPERAR
               ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: WidgetStatePropertyAll<Color>(
-                    Colors.amber,
-                  ),
-                ),
+                style: ButtonStyle(),
                 onPressed: () {},
                 child: const Text(
                   'Enviar link',
-                  style: TextStyle(color: Colors.black),
                 ),
               ),
             ],

@@ -19,7 +19,46 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Crona',
-
+      theme: ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: const Color(0xFF121016),
+        colorScheme: const ColorScheme.dark(
+          primary: Color(0xFFF4A6C0),
+          onPrimary: Color(0xFF121016),
+          secondary: Color(0xFFC9BE82),
+          tertiary: Color(0xFF78AEBB),
+          error: Color(0xFFB8384D),
+          surface: Color(0xFF1E1A24),
+          onSurface: Color(0xFFEDE7F0),
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF1E1A24),
+          foregroundColor: Color(0xFFF4A6C0),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFFF4A6C0),
+            foregroundColor: const Color(0xFF121016),
+          ),
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            foregroundColor: const Color(
+              0xFFB8A9C9,
+            ),
+          ),
+        ),
+        inputDecorationTheme: const InputDecorationTheme(
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFF4A4254)),
+          ),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFFF4A6C0)),
+          ),
+          labelStyle: TextStyle(color: Color(0xFFB8A9C9)),
+        ),
+      ),
       //
       // ROTAS
       //
