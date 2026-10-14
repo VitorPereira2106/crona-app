@@ -31,11 +31,73 @@ class _PerfilViewState extends State<PerfilView> {
           ],
         ),
       ),
-
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(20),
-          child: Column(children: []),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.info_outline),
+                  SizedBox(
+                    width: 6,
+                  ),
+                  Text('Dados do usuário'),
+                ],
+              ),
+
+              SizedBox(
+                height: 12,
+              ),
+
+              // INPUT USUÁRIO
+              TextField(
+                decoration: const InputDecoration(labelText: 'Usuário'),
+              ),
+
+              // INPUT EMAIL
+              TextField(
+                decoration: const InputDecoration(labelText: 'E-Mail'),
+              ),
+
+              // INPUT TELEFONE
+              TextField(
+                decoration: const InputDecoration(labelText: 'Telefone'),
+              ),
+
+              // INPUT SENHA
+              TextField(
+                decoration: const InputDecoration(labelText: 'Senha'),
+              ),
+
+              SizedBox(
+                height: 24,
+              ),
+
+              // BOTÕES EDIÇÃO
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Cancelar alterações',
+                    ),
+                  ),
+                  SizedBox(
+                    width: 24,
+                  ),
+                  ElevatedButton(
+                    style: ButtonStyle(),
+                    onPressed: () {},
+                    child: const Text(
+                      'Salvar',
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
